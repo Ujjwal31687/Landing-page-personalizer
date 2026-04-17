@@ -1,0 +1,10 @@
+streamlit==1.45.1
+beautifulsoup4==4.14.3
+langchain-core==1.2.30
+langchain-groq==1.1.2
+langgraph==1.1.6
+Pillow==12.2.0
+requests==2.32.3
+pydantic==2.11.4
+python-dotenv==1.1.0
+playwright==1.58.0

@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: landing-page-personalizer
+    runtime: python
+    plan: free
+    buildCommand: |
+      pip install -r requirements.txt
+      playwright install chromium
+      playwright install-deps chromium
+    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: PYTHON_VERSION
+        value: 3.11.0
